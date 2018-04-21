@@ -14,14 +14,14 @@ internal data class Account(
         private val username: String? = null,
 
         @Column(name = "ACCOUNT_LOGINID")
-        private val userId: String? = null,
+        val userId: String? = null,
 
         @Column(name = "ACCOUNT_PASSWORD")
-        private val password: String? = null,
+        val password: String? = null,
 
         @Column(name = "ACCOUNT_ROLE")
         @Enumerated(value = EnumType.STRING)
-        private val userRole: UserRole? = null,
+        val userRole: UserRole? = null,
 
         @Column(name = "ACCOUNT_SOCIAL_ID")
         private val socialId: Long? = null,
