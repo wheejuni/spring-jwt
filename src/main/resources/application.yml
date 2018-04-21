@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: local-dev
+
+---
+spring:
+  profiles: local-dev
+  datasource:
+    url: jdbc:h2:~/startupall-test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=true
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+jwt:
+  signingKey: test
+  issuer: bomee
+  expiry: 14400
