@@ -1,11 +1,16 @@
 package com.wheejuni.jwtdemo.security.tokens;
 
+import com.wheejuni.jwtdemo.dtos.FormLoginDto;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 public class PreAuthorizationToken extends UsernamePasswordAuthenticationToken {
 
-    public PreAuthorizationToken(String username, String password) {
+    private PreAuthorizationToken(String username, String password) {
         super(username, password);
+    }
+
+    public PreAuthorizationToken(FormLoginDto dto) {
+        this(dto.getId(), dto.getPassword());
     }
 
     public String getUsername() {
