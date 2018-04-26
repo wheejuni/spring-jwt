@@ -8,10 +8,10 @@ internal data class Account(
 
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        private val id: Long? = null,
+        val id: Long? = null,
 
         @Column(name = "ACCOUNT_USERNAME")
-        private val username: String? = null,
+        val username: String? = null,
 
         @Column(name = "ACCOUNT_LOGINID")
         val userId: String? = null,
@@ -21,10 +21,10 @@ internal data class Account(
 
         @Column(name = "ACCOUNT_ROLE")
         @Enumerated(value = EnumType.STRING)
-        val userRole: UserRole? = null,
+        var userRole: UserRole? = null,
 
         @Column(name = "ACCOUNT_SOCIAL_ID")
-        private val socialId: Long? = null,
+        var socialId: Long? = null,
 
         @Column(name = "ACCOUNT_SOCIAL_PROFILEPIC")
-        private val profileHref: String? = null)
+        var profileHref: String? = null)
