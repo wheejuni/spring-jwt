@@ -1,0 +1,2 @@
+GET http://localhost:8080/api/myinfo
+Authorization: Bearer your_token_value
