@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wheejuni.jwtdemo.dtos.TokenDto;
 import com.wheejuni.jwtdemo.security.AccountContext;
-import com.wheejuni.jwtdemo.security.JwtFactory;
+import com.wheejuni.jwtdemo.security.jwt.JwtFactory;
 import com.wheejuni.jwtdemo.security.tokens.PostAuthorizationToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,9 +29,7 @@ public class FormLoginAuthenticationSuccessHandler implements AuthenticationSucc
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest req, HttpServletResponse res, Authentication auth) throws IOException, ServletException {
-
-        PostAuthorizationToken token = (PostAuthorizationToken) auth;
-        AccountContext context = (AccountContext) token.getPrincipal();
+        AccountContext context = ((PostAuthorizationToken) auth).getAccountContext();
 
         String tokenString = factory.generateToken(context);
 

@@ -1,15 +1,13 @@
-package com.wheejuni.jwtdemo.security;
+package com.wheejuni.jwtdemo.security.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.wheejuni.jwtdemo.domain.Account;
+import com.wheejuni.jwtdemo.security.AccountContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 
 @Component
 public class JwtFactory {
@@ -27,6 +25,7 @@ public class JwtFactory {
         try {
             token = JWT.create()
                     .withIssuer("bomeehouse")
+                    .withClaim("USERNAME", context.getAccount().getUserId())
                     .withClaim("USER_ROLE", context.getAccount().getUserRole().getRoleName())
                     .sign(generateAlgorithm());
 
