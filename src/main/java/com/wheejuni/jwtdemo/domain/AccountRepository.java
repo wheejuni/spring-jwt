@@ -10,4 +10,6 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
 
     Optional<Account> findBySocialId(long socialId);
 
+    Optional<Account> findBySocialIdAndSocialProvider(long socialId, SocialProviders socialProvider);
+
 }

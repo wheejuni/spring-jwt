@@ -26,6 +26,10 @@ data class Account(
         @Column(name = "ACCOUNT_SOCIAL_ID")
         var socialId: Long? = null,
 
+        @Column(name = "ACCOUNT_SOCIAL_PROVIDER")
+        @Enumerated(value = EnumType.STRING)
+        var socialProvider: SocialProviders? = null,
+
         @Column(name = "ACCOUNT_SOCIAL_PROFILEPIC")
         var profileHref: String? = null) {
 
