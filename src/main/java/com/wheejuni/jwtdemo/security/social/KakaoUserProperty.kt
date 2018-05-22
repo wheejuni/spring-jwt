@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 data class KakaoUserProperty(
 
         @field:JsonProperty("kaccount_email")
-        val userEmail: String? = null,
+        private val userEmail: String? = null,
 
         @field:JsonProperty("kaccount_email_verified")
         val verified: Boolean = false,
