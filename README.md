@@ -23,6 +23,9 @@
 [제 3회차 방송](https://www.youtube.com/watch?v=qCA3JB4W_cw) 
 
 [제 4회차 방송](https://www.youtube.com/watch?v=jNNJnGiLMl8&list=PLcsqrv8NxApXzHViDU2fB1ew7KoLoaB02&index=4&t=0s)
+
+[제 5회차 방송](https://www.youtube.com/watch?v=qhCVfz1t68I&t=0s&index=6&list=PLcsqrv8NxApXzHViDU2fB1ew7KoLoaB02)
+
 [방송 바로가기](https://www.youtube.com/watch?v=SMZm2aqI_dQ)
 
 ---
