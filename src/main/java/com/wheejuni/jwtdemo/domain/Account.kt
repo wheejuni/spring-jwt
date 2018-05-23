@@ -1,20 +1,37 @@
 package com.wheejuni.jwtdemo.domain
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
-internal data class Account(
+@Table(name = "ACCOUNT")
+data class Account(
 
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        private val id: Long? = null) {
+        val id: Long? = null,
 
-    companion object {
-        //TODO(Write Logic for dto -> model)
-    }
+        @Column(name = "ACCOUNT_USERNAME")
+        val username: String? = null,
+
+        @Column(name = "ACCOUNT_LOGINID")
+        val userId: String? = "emalyun@naver.com",
+
+        @Column(name = "ACCOUNT_PASSWORD")
+        var password: String? = "1234",
+
+        @Column(name = "ACCOUNT_ROLE")
+        @Enumerated(value = EnumType.STRING)
+        var userRole: UserRole? = UserRole.USER,
+
+        @Column(name = "ACCOUNT_SOCIAL_ID")
+        var socialId: Long? = null,
+
+        @Column(name = "ACCOUNT_SOCIAL_PROVIDER")
+        @Enumerated(value = EnumType.STRING)
+        var socialProvider: SocialProviders? = null,
+
+        @Column(name = "ACCOUNT_SOCIAL_PROFILEPIC")
+        var profileHref: String? = null) {
 
 
 }

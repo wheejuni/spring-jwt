@@ -1,0 +1,6 @@
+POST http://localhost:8080/social
+Content-Type: application/json
+
+{"provider" : "NAVER", "token" : "AAAAQnNiK8JK2IpwABX/7P8A5dPfoiqkl9cbfe6f1HiqVnHBhk4Gsdw0AEvIVtKQSHqV2d6kpE00uXtSPp8r8HAFqtN1TlbWQCoEt89XTvYzrxD5"}
+
+###
